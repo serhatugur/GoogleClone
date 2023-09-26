@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="googleclone.css">
+</head>
+<body>
+<header>
+    <div class="google-logo">
+        <img src="googlelogo.png" alt="Google">
+    </div>
+    <form id="search-form" action="https://www.google.com/search">
+        <input type="text" id="search-input" name="q" placeholder="Search Google or type URL">
+        <div>
+            <button type="submit" id="search-buttons">Google Search</button>
+            <button type="button" id="feeling-lucky">I'm Feeling Lucky</button>
+        </div>
+    </form>
+</header>
+<main>
+</main>
+<footer>
+    <div id="footer-left">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search works</a></li>
+        </ul>
+    </div>
+    <div id="footer-right">
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    document.getElementById('feeling-lucky').addEventListener('click', function () {
+        var query = document.getElementById('search-input').value;
+        if (query) {
+            window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
+        }
+    });
+</script>
+</body>
+</html>
